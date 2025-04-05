@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="name">
+                <p>FOOD RECIPE</p>
+            </div>
+            <div class="header">
+                <div class="search-container">
+                    <input class="search-input" type="text" id="search" placeholder="Search food..." />
+                </div>
+                <div class="search-button">
+                    <button class="search-btn" onclick="getRecipe()"> Search </button>
+                </div>
+            </div>
+        </div>
+        <div id="foodList">
+        </div>
+        <div id="mealModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modalMealName"></h2>
+                <img id="modalMealImg" src="" alt="" />
+                <p><strong>Area:</strong> <span id="modalMealArea"></span></p>
+                <p><strong>Category:</strong> <span id="modalMealCategory"></span></p>
+                <p><strong>Ingredients:</strong></p>
+                <ul id="modalMealIngredients"></ul>
+                <p><strong>Instructions:</strong></p>
+                <div id="modalMealInstructions"></div>
+                <a id="modalYoutubeLink" href="" target="_blank">▶ Watch on YouTube</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

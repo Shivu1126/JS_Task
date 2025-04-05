@@ -1,0 +1,213 @@
+body {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    background-color: rgba(0, 0, 0, 0.13);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(3px);
+    height: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    color: #ffffff;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    width: 500px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.search-container:focus-within {
+    border-color: #ffbf00;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    padding: 6px 10px;
+}
+
+.search-button {
+    display: flex;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #ffbf00;
+    margin-left: 30px;
+}
+
+.search-btn {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    ;
+    background: transparent;
+}
+
+.search-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.search-button:hover,
+.search-btn:hover {
+    cursor: pointer;
+}
+
+#foodList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.meal-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    padding: 15px;
+}
+
+.meal-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+.meal-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.meal-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #444;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+    max-height: none;
+    overflow: visible;
+}
+
+.modal-content img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+#modalYoutubeLink {
+    display: block;
+    margin-top: 10px;
+    color: #e53935;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+#modalYoutubeLink:hover {
+    text-decoration: underline;
+    color: #ff6659;
+}
+
+#modalMealIngredients {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#modalMealIngredients li {
+    margin-bottom: 5px;
+}
+
+#modalMealInstructions p {
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.empty-msg {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
+.empty-msg em {
+    color: #e53935;
+    font-style: normal;
+    font-weight: 500;
+}
